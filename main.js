@@ -24,7 +24,6 @@ for (var i = 0; i < planets.length; i++) {
 }
 
 function calculateWeight(weight, planetName) {
-    // var planetWeight;
     for (let i = 0; i < planets.length; i++) {
         if (planets[i][0] == planetName) {
             planetWeight = (weight * (planets[i][1]));
