@@ -1,0 +1,108 @@
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  h1 {
+    text-shadow: 5px 5px 5px #F6E9B2 ;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #background-video {
+    width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      display: flex;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+  }
+  
+  .container {
+    background-color: black;
+    
+    max-width: 548px;
+    margin:auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+    text-align: center;
+  
+  }
+  
+  input, select {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    background:none;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  #planets,#user-weight{
+    background-color:black;
+    opacity: 70%;
+    
+  }
+  select option {
+    color:white;
+  }
+  input:hover{
+    box-shadow:2px 2px 30px 3px white;
+    transform: translateY(-5px);
+    cursor:pointer;
+  }
+  select:hover{
+    box-shadow:2px 2px 30px 3px white;
+    transform: translateY(-5px);
+    cursor:pointer;
+  }
+  button {
+    
+      background:none;
+        color: white;
+        border:1px solid;
+        padding:1em 2em;
+        font-size:1em;
+        position:relative;
+        border-radius: 5px;
+      
+        transition: all 0.25s;
+    }
+  
+  
+  button:hover {
+    background-color: black;
+    opacity: 60%;
+    box-shadow:2px 2px 30px 3px white;
+        transform: translateY(-5px);
+        cursor:pointer;
+  }
+  
+  #output {
+    text-shadow: #F6E9B2 1px 0 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  
+  
+  
+  
+  
