@@ -86,7 +86,7 @@ function handleClickEvent(e) {
     var outputMessage = document.getElementById("output");
     
     
-    if (isNaN(userWeight) || userWeight === '') {
+    if (isNaN(userWeight) || userWeight <= 0 || userWeight ==='') {
         outputMessage.innerHTML = "Please enter a valid number for weight.";
         return; 
     }
