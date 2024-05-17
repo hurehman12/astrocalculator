@@ -11,6 +11,52 @@ var planets = [
     ['Mercury', 0.377],
     ['Sun', 27.9]
 ];
+var planetInfo = {
+    'Pluto': {
+        info: 'Pluto is a dwarf planet in the Kuiper belt, a ring of bodies beyond Neptune.',
+        url: 'https://en.wikipedia.org/wiki/Pluto'
+    },
+    'Neptune': {
+        info: 'Neptune is the eighth and farthest planet from the Sun in the Solar System.',
+        url: 'https://en.wikipedia.org/wiki/Neptune'
+    },
+    'Uranus': {
+        info: 'Uranus is the seventh planet from the Sun. It has a unique side rotation.',
+        url: 'https://en.wikipedia.org/wiki/Uranus'
+    },
+    'Saturn': {
+        info: 'Saturn is known for its extensive ring system.',
+        url: 'https://en.wikipedia.org/wiki/Saturn'
+    },
+    'Jupiter': {
+        info: 'Jupiter is the largest planet in the Solar System.',
+        url: 'https://en.wikipedia.org/wiki/Jupiter'
+    },
+    'Mars': {
+        info: 'Mars is known as the Red Planet due to its reddish appearance.',
+        url: 'https://en.wikipedia.org/wiki/Mars'
+    },
+    'Moon': {
+        info: 'The Moon is Earth\'s only natural satellite.',
+        url: 'https://en.wikipedia.org/wiki/Moon'
+    },
+    'Earth': {
+        info: 'Earth is the third planet from the Sun and the only astronomical object known to harbor life.',
+        url: 'https://en.wikipedia.org/wiki/Earth'
+    },
+    'Venus': {
+        info: 'Venus is the second planet from the Sun and has a very thick atmosphere.',
+        url: 'https://en.wikipedia.org/wiki/Venus'
+    },
+    'Mercury': {
+        info: 'Mercury is the closest planet to the Sun and the smallest planet in the Solar System.',
+        url: 'https://en.wikipedia.org/wiki/Mercury_(planet)'
+    },
+    'Sun': {
+        info: 'The Sun is the star at the center of the Solar System and by far its most important source of energy.',
+        url: 'https://en.wikipedia.org/wiki/Sun'
+    }
+}
 
 var dropDown = document.getElementById("planets");
 
@@ -53,12 +99,15 @@ function handleClickEvent(e) {
     var result;
     if (planetName.toLowerCase() === 'sun') {
         result = calculateWeight(userWeight, planetName);
-        outputMessage.innerHTML = `If you were on the Sun, you would weigh ${result}lbs!`;
+        var additionalInfo = planetInfo[planetName];
+        outputMessage.innerHTML = `If you were on the Sun, you would weigh ${result}lbs!<br><br>${additionalInfo.info} <a href="${additionalInfo.url}" target="_blank">Learn more</a>.`
     } else if (planetName.toLowerCase() === 'moon') {
         result = calculateWeight(userWeight, planetName);
-        outputMessage.innerHTML = `If you were on the Moon, you would weigh ${result}lbs!`;
+        var additionalInfo = planetInfo[planetName];
+        outputMessage.innerHTML = `If you were on the Moon, you would weigh ${result}lbs!<br><br>${additionalInfo.info} <a href="${additionalInfo.url}" target="_blank">Learn more</a>.`
     } else {
-        result = calculateWeight(userWeight, planetName);
-        outputMessage.innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
+        var result = calculateWeight(userWeight, planetName);
+        var additionalInfo = planetInfo[planetName];
+        outputMessage.innerHTML = `If you were on ${planetName}, you would weigh ${result.toFixed(2)} lbs!<br><br>${additionalInfo.info} <a href="${additionalInfo.url}" target="_blank">Learn more</a>.`;
     }
-}
+    }
